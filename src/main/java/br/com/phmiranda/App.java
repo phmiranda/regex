@@ -1,7 +1,6 @@
 package br.com.phmiranda;
 
-import br.com.phmiranda.util.ValidateBaseUtil;
-import br.com.phmiranda.validate.*;
+import br.com.phmiranda.util.ValidacaoBase;
 
 /**
  * Hello world!
@@ -9,26 +8,14 @@ import br.com.phmiranda.validate.*;
  */
 public class App {
     public static void main( String[] args ) {
-        ValidateBaseUtil validateBaseUtil = new ValidateBaseUtil();
-        ValidacaoNomeCompletoUsuario validaNomeUsuario = new ValidacaoNomeCompletoUsuario();
-        ValidacaoTelefoneCelular validacaoTelefoneCelular = new ValidacaoTelefoneCelular();
-        ValidacaoTelefoneFixo validacaoTelefoneFixo = new ValidacaoTelefoneFixo();
-        ValidacaoDocumentoPessoal validacaoDocumentoPessoal = new ValidacaoDocumentoPessoal();
-        ValidacaoData validacaoData = new ValidacaoData();
+        // comentário.
+        ValidacaoBase validacaoBase = new ValidacaoBase();
 
-        validateBaseUtil.validate("11a22b33c");
-        validaNomeUsuario.validaNomePessoal();
-        validacaoTelefoneCelular.validaTelefoneCelular();
-        validacaoTelefoneFixo.validaTelefoneFixo();
-        validacaoDocumentoPessoal.validaDocumentoPessoal();
-        validacaoData.validaDataDeNascimento();
+        String validacaoBasicaNome = validacaoBase.validacaoBasica("11a22b33c");
+        String validacaoBaseNumeroTelefone = validacaoBase.validacaoNumeroPadrao("+5561985971259");
 
-
-        System.out.println("RESULTADO: " + validateBaseUtil);
-        System.out.println("VALIDAÇÃO DO NOME: " + validaNomeUsuario);
-        System.out.println("VALIDAÇÃO DO DOCUMENTO: " + validacaoDocumentoPessoal);
-        System.out.println("VALIDAÇÃO DO NÚMERO FIXO: " + validacaoTelefoneFixo);
-        System.out.println("VALIDAÇÃO DO NÚMERO DE CELULAR: " + validacaoTelefoneCelular);
-        System.out.println("VALIDAÇÃO DO DATA DE NASICMENTO: " + validacaoData);
+        // comentário.
+        //System.out.println("VALIDAÇÃO BÁSICA DE NOME: " + validacaoBasicaNome);
+        //System.out.println("VALIDAÇÃO BÁSICA DE TELEFONE (CELULAR): " + validacaoBaseNumeroTelefone);
     }
 }

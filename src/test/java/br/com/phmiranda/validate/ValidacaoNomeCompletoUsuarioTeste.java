@@ -2,13 +2,11 @@
  * User: Pedro
  * Project: regex
  * Description: N/A
- * Date: 02/06/2021
+ * Date: 08/06/2021
  */
 
 package br.com.phmiranda.validate;
 
-public class ValidacaoData {
-    public void validaDataDeNascimento() {
-
-    }
+public class ValidacaoNomeCompletoUsuarioTeste {
+    // include code here.
 }
